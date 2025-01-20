@@ -1,4 +1,4 @@
-package Topic_3.project_1.Topic_3_1.Topic_3_6;
+package topic_3.topic_3_6;
 
 public class Main {
     public static void main(String[] args) {

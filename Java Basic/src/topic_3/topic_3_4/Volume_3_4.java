@@ -1,4 +1,4 @@
-package Topic_3.project_1.Topic_3_1.Topic_3_4;
+package topic_3.topic_3_4;
 
 import java.util.Scanner;
 
