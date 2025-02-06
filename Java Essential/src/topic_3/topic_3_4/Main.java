@@ -17,7 +17,8 @@ public class Main {
         enterWord();
     }
 
-    public static void enterWord(){
+
+    public static void enterWord() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Напишіть: так  - якщо хочете ввести ключ");
         //System.out.println("Або:      ні   - якщо хочете отримати демо версію");
@@ -25,7 +26,7 @@ public class Main {
         createDocVersion(confirm);
     }
 
-    public static void createDocVersion (String confirm){
+    public static void createDocVersion(String confirm) {
         String key = confirm;
         switch (key) {
             case "так":
@@ -43,7 +44,7 @@ public class Main {
         }
     }
 
-    public static void sayNo () {
+    public static void sayNo() {
         System.out.println("Вам надано демо доступ до документу");
         DocumentWorker doc3 = new DocumentWorker();
         doc3.openDocument();
@@ -52,26 +53,26 @@ public class Main {
         enterWord();
     }
 
-    public static void sayYes () {
+    public static void sayYes() {
         String key = askKey();
-        switch (key){
-        case "2343456", "4563232", "7831692":
-            System.out.println("Вам надано доступ до документу Pro");
-            DocumentWorker docUp1 = new ProDocumentWorker();
-            docUp1.openDocument();
-            //ProDocumentWorker docDown = (ProDocumentWorker) docUp;  //?????
-            docUp1.editDocument();
-            docUp1.saveDocument();
-            enterWord();
-            break;
+        switch (key) {
+            case "2343456", "4563232", "7831692":
+                System.out.println("Вам надано доступ до документу Pro");
+                DocumentWorker docUp1 = new ProDocumentWorker();
+                docUp1.openDocument();
+                //ProDocumentWorker docDown = (ProDocumentWorker) docUp;  //?????
+                docUp1.editDocument();
+                docUp1.saveDocument();
+                enterWord();
+                break;
 
             case "273687236", "3773678572", "3862376":
-            System.out.println("Вам надано доступ до документу Expert");
-            DocumentWorker docUp2 = new ExpertDocumentWorker();
-            docUp2.openDocument();
-            docUp2.editDocument();
-            docUp2.saveDocument();
-            break;
+                System.out.println("Вам надано доступ до документу Expert");
+                DocumentWorker docUp2 = new ExpertDocumentWorker();
+                docUp2.openDocument();
+                docUp2.editDocument();
+                docUp2.saveDocument();
+                break;
 
             default:
                 System.out.println("Невірний ключ, спробуйте ще раз!");
@@ -80,7 +81,7 @@ public class Main {
         }
     }
 
-    public static String askKey () {
+    public static String askKey() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введіть ключ доступу:");
         String key = scan.nextLine();
